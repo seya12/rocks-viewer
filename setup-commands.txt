@@ -1,0 +1,38 @@
+# Create root directory
+mkdir rocksdb-explorer
+cd rocksdb-explorer
+
+# Create backend directory and generate Spring Boot project
+mkdir backend
+cd backend
+# Use Spring Initializer to create a new project with:
+# - Build tool: Gradle (Kotlin)
+# - Language: Java
+# - Spring Boot: 3.2.3
+# - Group: dev.rocksdb
+# - Artifact: explorer-backend
+# - Package: dev.rocksdb.explorer
+# Dependencies:
+# - Spring Web
+# - Spring Boot DevTools
+# - Lombok
+
+# Create frontend directory and generate React project with Vite
+cd ..
+mkdir frontend
+cd frontend
+npm create vite@latest . -- --template react-ts
+
+# Install dependencies
+npm install
+
+# Install Tailwind CSS
+npm install -D tailwindcss postcss autoprefixer
+npm install tailwindcss @tailwindcss/vite
+
+# Install application dependencies
+npm install @tanstack/react-query @tanstack/react-table
+npm install react-dropzone
+npm install @headlessui/react @heroicons/react
+npm install clsx
+npm install axios 
