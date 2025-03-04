@@ -23,9 +23,8 @@ public class TestDatabaseCreator {
         Path dbPath = Path.of("test-db-" + size);
         dbPath.toFile().mkdirs();
 
-        try (final Options options = new Options().setCreateIfMissing(true);
-             final RocksDB db = RocksDB.open(options, dbPath.toString())) {
-            
+        try (final Options options = new Options();
+             final RocksDB db = RocksDB.open(options.setCreateIfMissing(true), dbPath.toString())) {
             // Create entries with different patterns
             for (int i = 1; i <= entries; i++) {
                 // Users (20% of entries)

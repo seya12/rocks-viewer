@@ -52,9 +52,9 @@ public class RocksDBService {
 
         // Read database
         Map<String, String> keyValues = new HashMap<>();
-        try (final Options options = new Options().setCreateIfMissing(false);
-             final RocksDB db = RocksDB.openReadOnly(options, dbPath.toString())) {
-            
+        try (final Options options = new Options();
+             final RocksDB db = RocksDB.openReadOnly(options.setCreateIfMissing(false), dbPath.toString())) {
+
             try (RocksIterator iter = db.newIterator()) {
                 for (iter.seekToFirst(); iter.isValid(); iter.next()) {
                     String key = new String(iter.key());

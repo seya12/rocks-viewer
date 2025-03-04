@@ -16,10 +16,8 @@ public class TestUtils {
         dbPath.toFile().mkdirs();
 
         // Create a small test database
-        try (final Options options = new Options().setCreateIfMissing(true);
-             final RocksDB db = RocksDB.open(options, dbPath.toString())) {
-            
-            // Add a user entry
+        try (final Options options = new Options();
+             final RocksDB db = RocksDB.open(options.setCreateIfMissing(true), dbPath.toString())) {            // Add a user entry
             String userKey = "user:000001";
             String userValue = """
                 {
