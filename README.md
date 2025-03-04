@@ -90,15 +90,7 @@ RocksDB Explorer is a modern web-based tool designed to explore and analyze Rock
 - Temporary files are automatically cleaned up after processing
 
 ## Creating Test Files
-To create test RocksDB files for development and testing, use the provided TestDatabaseCreator utility:
-
-1. Navigate to the backend directory:
-   ```bash
-   cd backend
-   ```
-
-2. Run the test database creator:
-   Run the `TestDatabaseCreator` test class in your IDE.
+To create test RocksDB files for development and testing, use the provided `TestDatabaseCreator utility:
 
 This will create three sample databases with realistic test data:
 - `test-rocksdb-small.zip` (5 entries)
