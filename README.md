@@ -109,8 +109,5 @@ Each type contains realistic JSON data with various fields and nested structures
 - Automatic cleanup of temporary files
 - Protection against malicious uploads
 
-## Contributing
-Contributions are welcome! Please feel free to submit pull requests.
-
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
